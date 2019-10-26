@@ -1,0 +1,99 @@
+:root {
+    --primary-color: #1f2934;
+    --color-font: #cbcdd3;
+
+    --serif-font: 'Indie Flower', serif;
+    --sans-serif-font:  'Open Sans Condensed', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100px 4fr 1fr 1fr;
+    grid-template-rows: 160px 1fr 1fr;
+    grid-template-areas: "logo image image menu" "sidebar image image description" "sidebar image image header";
+   
+    height: 100%;
+    background-color: var(--primary-color);
+    color: var(--color-font);
+}
+
+.logo {
+    grid-area: logo;
+
+}
+
+.logo__svg{
+    width: 64px;
+    height: auto;
+    fill: var(--color-font);
+    margin: 0 auto;
+    display: block;
+}
+
+.navigation{
+    grid-area: menu;
+}
+
+.navigation__menu {
+    width: 64px;
+    height: auto;
+    fill: var(--color-font);
+    margin: 0 auto;
+    display: block;
+}
+
+.header{
+    grid-area: header;
+    grid-column-start: 3;
+
+    background-color: var(--primary-color);
+    z-index: 1;
+    font-family: var(--serif-font);
+   
+    
+
+}
+
+.header__text {
+    font-size: 6rem;
+    margin-left: -1.7ch;
+}
+
+.header__text1 {
+    font-size: 6rem;
+    margin-left: 2ch;
+}
+
+.description {
+    grid-area: description;
+    padding: 1rem;
+    font-size: 2rem;
+    font-family: var(--sans-serif-font);
+
+}
+
+.sidebar{
+    grid-area: sidebar;
+
+}
+
+.heroImage{
+    grid-area: image;
+
+    background-image: url("https://images.unsplash.com/photo-1512873897628-eea05c840147?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+
+    background-size: cover;
+    background-position: center center;
+  
+
+}
